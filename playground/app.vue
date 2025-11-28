@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
+
+
+onMounted(async () => {
+ fetch('http://localhost:3001/api/data').then(res => res.json()).then(data => {
+  console.log("data",data);
+ })
+
+})
 
 </script>
 <template>
@@ -9,6 +18,4 @@
 
 
 
-<style scoped>
-
-</style>
+<style scoped></style>
